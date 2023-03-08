@@ -1,0 +1,120 @@
+body {
+  background-color: whitesmoke;
+  overflow-y: none;
+}
+
+.regForm-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin-inline: auto;
+  margin-top: 2%;
+  background-color: white;
+  padding: 25px;
+  border-radius: 5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.regForm-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.regForm-header h2 {
+  margin-top: 8px;
+}
+
+.regForm-header p {
+  margin-top: -10px;
+}
+
+.regForm-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.regForm-inputs label {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.664);
+}
+
+.regForm-input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.regForm-input1,
+.regForm-input2 {
+  border: 2px solid whitesmoke;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  border-bottom-style: groove;
+  padding: 10px;
+  outline: none;
+}
+
+.regForm-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 255, 0.829);
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.regForm-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.regForm-link {
+  text-decoration: none;
+  color: blue;
+}
+
+.regForm-icon1 {
+  color: white;
+  font-size: x-large;
+  border: 1px solid rgba(0, 0, 255, 0.644);
+  border-radius: 100%;
+  padding: 8px;
+  background-color: rgba(0, 0, 255, 0.644);
+}
+
+.regForm-icon2 {
+  margin-left: 8px;
+}
+
+.regEmail-icon,
+.regPwd-icon,
+.regName-icon {
+  color: rgba(128, 128, 128, 0.747);
+  position: absolute;
+  margin-left: 355px;
+  margin-top: 33px;
+}
+
+@media screen and (max-width: 425px) {
+  .regForm-icon2 {
+    display: none;
+  }
+  .regEmail-icon,
+  .regPwd-icon,
+  .regName-icon {
+    display: none;
+  }
+}
