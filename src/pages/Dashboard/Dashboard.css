@@ -1,0 +1,98 @@
+/* .userIcon {
+  display: flex;
+  margin-top: 5px;
+  justify-content: flex-end;
+  margin-right: 20px;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.userIcon i {
+  color: white;
+  font-size: x-large;
+  border: 1px solid rgba(0, 0, 255, 0.644);
+  border-radius: 100%;
+  padding: 8px;
+  background-color: rgba(0, 0, 255, 0.644);
+}
+
+.userIcon-link {
+  text-decoration: none;
+  color: black;
+} */
+
+.sectionContainer {
+  display: flex;
+}
+
+.sidebarContainer {
+  background-color: rgba(50, 50, 238, 0.932);
+  width: 55%;
+  height: 100%;
+}
+
+.sidebarContainer h2 {
+  padding: 8px 5px;
+  margin-top: -0.5px;
+  color: white;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.sidebar-item {
+  padding-left: 10px;
+}
+
+.sidebar-item h3 {
+  font-size: 24px;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.sidebar-item label {
+  font-size: 21px;
+  color: rgba(255, 255, 255, 0.932);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.sidebar-item input {
+  cursor: pointer;
+}
+
+.itemContainer {
+  margin-top: -10px;
+}
+
+.mainContent {
+  margin: auto;
+}
+
+.sidebar-btn {
+  margin-top: 20px;
+  margin-inline: auto;
+  max-width: 222px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #e63b60c4;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  width: 100%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color:  #E63B60;
+}
+
+@media screen and (min-width: 768px) {
+  .sidebarContainer {
+    width: 100%;
+  }
+}

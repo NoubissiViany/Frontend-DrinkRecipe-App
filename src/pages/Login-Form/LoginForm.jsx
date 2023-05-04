@@ -1,10 +1,34 @@
+/* eslint-disable no-console */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/button-has-type */
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './LoginForm.css';
+import { login } from '../../api/auth';
+import { saveToken } from '../../utils';
 
 function LoginForm() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const values = Object.fromEntries(
+      new FormData(event.currentTarget).entries()
+    );
+    try {
+      const { data } = await login(values.email, values.password);
+      saveToken(data.token);
+      console.log(values.email, values.password, data.token);
+      navigate('/profile');
+    } catch (e) {
+      if (e.response.status === 400) {
+        setError('Invalid email or password');
+      }
+    } finally {
+      setIsLoading(false);
+    }
+  };
   return (
     <div className="form-container">
       <div className="form-header">
@@ -13,12 +37,17 @@ function LoginForm() {
         <p>Sign into your account</p>
       </div>
       <div>
-        <form action="">
+        <form action="" onSubmit={handleSubmit}>
           <div className="form-inputs">
             <div className="form-input">
               <label htmlFor="">Email</label>
               <i className="fa-solid email-icon fa-envelope" />
-              <input className="form-input1" type="email" required />
+              <input
+                className="form-input1"
+                name="email"
+                type="email"
+                required
+              />
             </div>
             <div className="form-input">
               <label htmlFor="">Password</label>
@@ -26,19 +55,22 @@ function LoginForm() {
               <input
                 placeholder=""
                 className="form-input2"
+                name="password"
                 type="password"
                 required
               />
             </div>
+            {isLoading && <p>Loading...</p>}
+            {error && <p className="error">{error}</p>}
           </div>
           <div className="form-links">
             <p>
               No account?{' '}
-              <Link to="/dashboard/registration" className="form-link">
+              <Link to="/registration" className="form-link">
                 Signup
               </Link>
             </p>
-            <button className="form-btn">
+            <button type="submit" className="form-btn">
               Login
               <i className="fa-solid icon2 fa-arrow-right" />
             </button>
