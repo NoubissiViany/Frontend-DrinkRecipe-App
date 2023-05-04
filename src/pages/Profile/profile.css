@@ -1,0 +1,176 @@
+.bodyContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  margin-top: 15px;
+  background-color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-header h2 {
+  margin-top: 8px;
+}
+
+.profile-header p {
+  margin-top: -10px;
+}
+
+.formContainer {
+  width: 100%;
+}
+
+.profile-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.profile-inputs label {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.664);
+}
+
+.profile-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-input1,
+.profile-input2 {
+  border: 2px solid whitesmoke;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  border-bottom-style: groove;
+  padding: 10px;
+  outline: none;
+  font-size: 18px;
+}
+
+.profile-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 68, 0, 0.849);
+  font-weight: bold;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 20px;
+  width: 100%;
+  color: white;
+}
+
+.loading-icon {
+  font-size: 20px;
+}
+
+.profile-btn:hover {
+  background-color: orangered;
+}
+
+.profile-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.profile-link {
+  text-decoration: none;
+  color: white;
+}
+
+.profile-icon1 {
+  color: white;
+  font-size: x-large;
+  border: 1px solid rgba(0, 0, 255, 0.644);
+  border-radius: 100%;
+  padding: 8px;
+  background-color: rgba(0, 0, 255, 0.644);
+}
+
+.profile-icon2 {
+  margin-left: 8px;
+}
+
+.profileEmail-icon,
+.profilePwd-icon,
+.profileName-icon {
+  color: rgba(128, 128, 128, 0.747);
+  position: absolute;
+  margin-left: 380px;
+  margin-top: 33px;
+}
+
+.apikey-p1 {
+  font-size: 25px;
+}
+
+.apikey-p2 {
+  font-size: 20px;
+}
+
+.apiKey-Btn {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 255, 0.788);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
+
+.apiKey-Btn:hover {
+  background-color: blue;
+}
+
+.apiKey-Btn i {
+  margin-left: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .profile-icon2 {
+    display: none;
+  }
+  .profileEmail-icon,
+  .profilePwd-icon,
+  .profileName-icon {
+    display: none;
+  }
+  .bodyContainer {
+    flex-direction: column;
+  }
+  .formContainer {
+    width: 70%;
+  }
+  .apiKey-container {
+    padding-inline: 10px;
+  }
+  .apiKey-container h2,
+  .apiKey-container p {
+    text-align: center;
+  }
+}

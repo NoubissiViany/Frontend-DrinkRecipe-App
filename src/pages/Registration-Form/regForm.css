@@ -1,8 +1,3 @@
-body {
-  background-color: whitesmoke;
-  overflow-y: none;
-}
-
 .regForm-container {
   display: flex;
   flex-direction: column;
@@ -10,9 +5,9 @@ body {
   align-items: center;
   max-width: 400px;
   margin-inline: auto;
-  margin-top: 2%;
+  margin-top: 8px;
   background-color: white;
-  padding: 25px;
+  padding: 6px 25px;
   border-radius: 5px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -32,6 +27,10 @@ body {
   margin-top: -10px;
 }
 
+.formContainer {
+  margin-top: -10px;
+}
+
 .regForm-inputs {
   display: flex;
   flex-direction: column;
@@ -47,7 +46,6 @@ body {
 .regForm-input {
   display: flex;
   flex-direction: column;
-  gap: 5px;
 }
 
 .regForm-input1,
@@ -59,6 +57,7 @@ body {
   border-bottom-style: groove;
   padding: 10px;
   outline: none;
+  font-size: 18px;
 }
 
 .regForm-btn {
@@ -77,7 +76,7 @@ body {
   justify-content: center;
   gap: 25px;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 20px;
   font-weight: bold;
 }
 
@@ -104,7 +103,7 @@ body {
 .regName-icon {
   color: rgba(128, 128, 128, 0.747);
   position: absolute;
-  margin-left: 355px;
+  margin-left: 375px;
   margin-top: 33px;
 }
 
